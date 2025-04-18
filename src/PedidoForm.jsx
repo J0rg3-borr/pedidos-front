@@ -5,7 +5,7 @@ const PedidoForm = ({ onPedidoAgregado }) => {
     const [pedido, setPedido] = useState('');
 
     const enviarPedido = async () => {
-        const response = await fetch('https://pedidos-back-pi.vercel.app/api/ventas', {
+        const response = await fetch('https://pedidos-front-five.vercel.app/api/ventas', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ nombre, pedido }),
