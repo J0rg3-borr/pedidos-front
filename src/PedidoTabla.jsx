@@ -4,7 +4,7 @@ const PedidoTabla = () => {
     const [pedidos, setPedidos] = useState([]);
 
     const cargarPedidos = async () => {
-        const response = await fetch('https://20251-calculadora-back.vercel.app/api/ventas');
+        const response = await fetch('https://pedidos-front-five.vercel.app/Api/ventas');
         const data = await response.json();
         setPedidos(data);
     };
@@ -16,6 +16,7 @@ const PedidoTabla = () => {
     return (
         <div>
             <button onClick={cargarPedidos}>Actualizar</button>
+            <button onClick={() => setPedidos([])}>Borrar Tabla</button>
             <table>
                 <thead>
                     <tr>
